@@ -2,8 +2,8 @@
 pipeline {
     agent any
     environment {
-        NEXUS_CREDS = credentials('nexus_creds')
-        NEXUS_DOCKER_REPO = 'localhost:8082'
+        NEXUS_CREDS = credentials('nexus')
+        NEXUS_DOCKER_REPO = '172.31.19.131:8082'
     }
 
     stages {
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Nexus Docker Repository Login'
                 script{
-                    withCredentials([usernamePassword(credentialsId: 'nexus_creds', usernameVariable: 'USER', passwordVariable: 'PASS' )]){
+                    withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USER', passwordVariable: 'PASS' )]){
                        sh ' echo $PASS | docker login -u $USER --password-stdin $NEXUS_DOCKER_REPO'
                     }
                    
