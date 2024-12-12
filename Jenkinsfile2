@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         NEXUS_CREDS = credentials('nexus')
-        NEXUS_DOCKER_REPO = '172.31.19.131:8082'
+        NEXUS_DOCKER_REPO = 'nexus-923081166.us-east-1.elb.amazonaws.com:8082'
     }
 
     stages {
