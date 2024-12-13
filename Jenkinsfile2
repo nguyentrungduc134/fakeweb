@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         NEXUS_CREDS = credentials('nexus')
-        NEXUS_DOCKER_REPO = 'nexus.duc.lovestoblog.com'
+        NEXUS_DOCKER_REPO = 'https://nexus.duc.lovestoblog.com'
     }
 
     stages {
