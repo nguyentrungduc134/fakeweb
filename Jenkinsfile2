@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         NEXUS_CREDS = credentials('nexus')
-        NEXUS_DOCKER_REPO = 'https://nexus.duc.lovestoblog.com'
+        NEXUS_DOCKER_REPO = 'nexus.duc.lovestoblog.com'
     }
 
     stages {
@@ -27,7 +27,7 @@ pipeline {
                 echo 'Nexus Docker Repository Login'
                 script{
                     withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USER', passwordVariable: 'PASS' )]){
-                       sh ' echo $PASS | docker login -u $USER --password-stdin http://$NEXUS_DOCKER_REPO'
+                       sh ' echo $PASS | docker login -u $USER --password-stdin https://$NEXUS_DOCKER_REPO'
                     }
                    
                 }
