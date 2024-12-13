@@ -1,4 +1,4 @@
-Here’s a clear and well-organized **README** document that combines generating a **self-signed certificate with SANs** and setting up the **AWS Application Load Balancer (ALB)** with the certificate for a Nexus Docker Registry.
+[VIDEO](https://drive.google.com/file/d/1jD1UawSNVOV1oa6kS-OBDYAdpZytusq8/view?usp=sharing)
 
 ---
 
