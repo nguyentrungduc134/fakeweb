@@ -98,7 +98,7 @@ docker login https://nexus.duc.lovestoblog.com
 Follow these steps to set up an **Application Load Balancer (ALB)**:
 
 1. **Create a Target Group**:
-   - Choose **HTTP** protocol and port **8081** (default Nexus Docker Registry port).
+   - Choose **HTTP** protocol and port **8082** (default Nexus Docker Registry port).
    - Register your Nexus server instances.
 
 2. **Create the ALB**:
@@ -107,7 +107,7 @@ Follow these steps to set up an **Application Load Balancer (ALB)**:
       - Choose the ACM certificate you created earlier.
       - Forward requests to the **Target Group** created in Step 1.
    - **Security Group**:
-      - Allow inbound HTTPS (443) and HTTP (8081) traffic.
+      - Allow inbound HTTPS (443) and HTTP (8082) traffic.
 
 3. **DNS Configuration**:
    - If using **Route 53** (Private Hosted Zone):
