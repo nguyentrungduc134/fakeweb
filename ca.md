@@ -131,13 +131,6 @@ docker login https://nexus.duc.lovestoblog.com
 
 You should not see any **x509** certificate errors.
 
-### **4.2 Verify ALB SSL Termination**
-- Open a browser and navigate to:
-  ```
-  https://nexus.duc.lovestoblog.com
-  ```
-- Check that the connection is **secure** and uses the ACM certificate.
-
 ---
 
 ## **5. Cleanup and Troubleshooting**
